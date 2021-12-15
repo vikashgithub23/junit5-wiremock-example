@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  wiremock-test:
+    runs-on: ubuntu-latest
+    name: Set up WireMock 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+      - name: test
+        run: mvn clean verify
+     
+    
