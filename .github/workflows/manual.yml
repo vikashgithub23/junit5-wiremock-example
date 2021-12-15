@@ -15,7 +15,7 @@ jobs:
         uses: williamhaw/setup-wiremock-action@v0.1.2
         id: setup-wiremock
         with:
-          mappings: ./src/test/java/WireMockJUnit5Test.java
+          mappings: ./src/test/java/
           files: ./src/test/resources/__files/json/glossary.json
           command: 'node --version'
       - name: Get the WireMock standard output
