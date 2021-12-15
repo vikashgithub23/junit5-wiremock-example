@@ -20,10 +20,7 @@ jobs:
           command: 'node --version'
       
       - name: post request
-        run: |
-          curl -X POST \
---data '{ "request": { "url": "/get/this", "method": "GET" }, "response": { "status": 200, "body": "Here it is!\n" }}' \
-http://localhost:8080/__admin/mappings/new
+        run: ls -lrta
 
       - name: Get the WireMock standard output
         run: echo "${{ steps.setup-wiremock.outputs.wiremock-stdout }}"
